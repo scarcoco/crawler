@@ -1,0 +1,51 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // 基础配置
+            // https://code.visualstudio.com/docs/editor/debugging
+
+            // Node配置
+            // https://code.visualstudio.com/docs/nodejs/nodejs-debugging 
+
+            // 支持的配置变量
+            // https://code.visualstudio.com/docs/editor/variables-reference
+            
+            "name": "ts-node",
+            "type": "node",
+            "request": "launch",
+
+            // "preLaunchTask"
+
+            //  current working directory for finding dependencies and other files
+			"cwd": "${workspaceRoot}",
+            
+            // optional arguments passed to the runtime executable.
+            "runtimeArgs": [
+                "-r", 
+                "ts-node/register"
+            ],
+            
+            // https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_supported-nodelike-runtimes
+            // auto | inspector | legacy
+			"protocol": "inspector",
+
+            // arguments passed to the program to debug
+            "args": "${workspaceFolder}/src/index.ts",
+            
+            // // this attribute controls the visibility of the Debug Console panel during a debugging session.
+			// "internalConsoleOptions": "openOnSessionStart",
+            
+            // kind of console to launch the program
+            "console": "internalConsole",
+            
+            // environment variables
+            "env": {
+				"CRAWLER_PARSER": "jsdom"
+			}
+        }
+    ]
+}
