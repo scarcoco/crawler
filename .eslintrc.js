@@ -39,6 +39,8 @@ module.exports = {
     'quotes': ['error', 'single'],
     '@typescript-eslint/quotes': ['error', 'single'],
 
+    '@typescript-eslint/no-explicit-any': 0,
+
     'import/prefer-default-export': 0
   },
 };
